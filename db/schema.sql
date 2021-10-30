@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS text-adv;
+
+CREATE DATABASE text-adv;
