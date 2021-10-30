@@ -6,18 +6,22 @@ Greg Zaragoza == Natasha Ortiz == Brigitte Powers
 
 # User Story
 
+GIVEN
+WHEN
+THEN
+
 \
 
 # MVP Functionality
 
 ### (what information can the user see? What actions can they do?)
 
-* make a character
-* save and access user character data // checkpoint // save
-* 4-5 rooms to explore
-* manage inventory / change equipment / loadout
-* view character stats and inventory
-* display via frontend or console emulator (undecided)
+- make a character
+- save and access user character data // checkpoint // save
+- 4-5 rooms to explore
+- manage inventory / change equipment / loadout
+- view character stats and inventory
+- display via frontend or console emulator (undecided)
 
 # API Routes
 
