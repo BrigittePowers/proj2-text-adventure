@@ -7,13 +7,16 @@
 		"test": "jest",
 		"start": "node server.js",
 		"seed": "node seeds/index.js"
+
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/BrigittePowers/proj2-text-adventure.git"
 	},
-	"keywords": [],
-	"author": "",
+	"keywords": [
+		"nope"
+	],
+	"author": "Greg Zaragoza, Natasha Ortiz, Brigitte Powers",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/BrigittePowers/proj2-text-adventure/issues"
