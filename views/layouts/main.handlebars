@@ -12,7 +12,12 @@
 			<h1>
 				Text Adventure
 			</h1>
-			{{!-- {{/if}} --}}
+			        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/logout">Login</a>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
 		</header>
 		<main>
 			{{{body}}}
