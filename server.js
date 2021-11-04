@@ -11,8 +11,9 @@ const PORT = process.env.PORT || 3001;
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
+	//TODO: move session to .env and heroku
 	secret: 'Super secret secret',
-	cookie: { maxAge: 36000 },
+	cookie: {},
 	resave: false,
 	saveUninitialized: true,
 	store: new SequelizeStore({
