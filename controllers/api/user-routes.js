@@ -13,7 +13,7 @@ router.post('/signup', (req, res) => {
 			req.session.save(() => {
 				req.session.user_id = dbUserData.id;
 				req.session.username = dbUserData.username;
-				req.session.loggedIn = true;
+				req.session.logged_in = true;
 
 				res.json(dbUserData);
 			});
@@ -24,7 +24,7 @@ router.post('/signup', (req, res) => {
 		});
 });
 
-// returning user sign-in
+// returning user login
 router.post('/login', async (req, res) => {
 	try {
 		const userData = await User.findOne({

@@ -6,58 +6,75 @@
 </div>
 {{/each}} --}}
 
-		{{!-- <header>
+{{! <header>
 			<h1>
 				The Sword
-			</h1> --}}
-			        <!-- Conditionally render login or logout links -->
-        {{#if loggedIn}}
-						<a class='nav' id='logout' href='#'>Logout</a>
-					{{else}}
-						<a class='nav' href='/login'>Login</a>
-					{{/if}}
-		{{!-- </header> --}}
+			</h1> }}
+<!-- Conditionally render login or logout links -->
+{{! </header> }}
 
 <main>
 
-  <section>
+	<section>
 
-      <div id="intro">
-        
-          <h1>The Sword</h1>
-          <h2>Which choices speak to you?</h2>
+		<div id='intro'>
 
-        <div id="form">
-          <div>
-            <form>
-              <h3>Login</h3>
-                <input class="form-input" type="text" id="username-login" placeholder="USERNAME"/>
-                <input class="form-input" type="password" id="password-login" placeholder="PASSWORD"/>
-                <button class="submit" type="submit">LOG IN</button>
-            </form>
-          </div>
+			<h1>The Sword</h1>
+			<h2>Which choices speak to you?</h2>
 
-          <div>
-            <form>
-              <h3>Signup</h3>
-                <input class="form-input" type="text" id="username-signup" placeholder="NEW USERNAME"/>
-                <input class="form-input" type="password" id="password-signup" placeholder="NEW PASSWORD"/>
-                <button class="submit" type="submit">SIGN UP</button>
-            </form>
-          </div>
-        </div>
+			<div id='form'>
+				<div>
+					<form id='login-form'>
+						<h3>Login</h3>
+						<input
+							class='form-input'
+							type='text'
+							id='username-login'
+							placeholder='USERNAME'
+						/>
+						<input
+							class='form-input'
+							type='password'
+							id='password-login'
+							placeholder='PASSWORD'
+						/>
+						<button class='submit' type='submit'>LOG IN</button>
+					</form>
+				</div>
 
-      <footer>
+				<div>
+					<form id='signup-form'>
+						<h3>Signup</h3>
+						<input
+							class='form-input'
+							type='text'
+							id='username-signup'
+							placeholder='NEW USERNAME'
+						/>
+						<input
+							class='form-input'
+							type='password'
+							id='password-signup'
+							placeholder='NEW PASSWORD'
+						/>
+						<button class='submit' type='submit'>sign up</button>
+					</form>
+				</div>
+			</div>
 
-        <h5>UTSA CODING BOOT CAMP 2021-22</h5>
-        <p>AN ADVENTURE BY NATASHA ORTIZ, BRIGITTE POWERS, AND GREG ZARAGOZA</p>
-      </footer>
+			<footer>
 
-      </div>
+				<h5>UTSA CODING BOOT CAMP 2021-22</h5>
+				<p>AN ADVENTURE BY NATASHA ORTIZ, BRIGITTE POWERS, AND GREG
+					ZARAGOZA</p>
+			</footer>
 
-      <div id="image"></div>
+		</div>
 
-  </section>
+		<div id='image'></div>
 
+	</section>
+	<script src='/js/signup.js'></script>
+	<script src='/js/login.js'></script>
 
 </main>
