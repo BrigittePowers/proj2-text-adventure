@@ -1,6 +1,5 @@
-const sequelize = require('../config/connection');
-const { User, Answer } = require('../models');
 const router = require('express').Router();
+const { User, Story } = require('../models');
 
 // test .get
 router.get('/', async (req, res) => {
@@ -19,6 +18,26 @@ router.get('/', async (req, res) => {
 		res.status(500).json(err);
 	}
 });
+
+//test Story .get
+router.get('/story/:id', async (req, res) => {
+    try {
+      const storyData = await Story.findByPk(req.params.id);
+  
+      const story = storyData.get({ plain: true });
+      
+      res.render('story', {
+        story,
+        // logged_in: req.session.logged_in,
+        // username: Post.user_id
+      });
+
+      res.status(200).json(story);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
 
 // login
 router.get('/login', (req, res) => {

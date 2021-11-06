@@ -1,29 +1,17 @@
 <html lang='en'>
 
 	<head>
-		<meta charset='UTF-8' />
-		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-		<title>Test</title>
-		{{! <link rel="stylesheet" href="/css/jass.css"> }}
+		<meta charset='UTF-8'/>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+		<link rel="stylesheet" href="/css/style.css">
+
+		<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;600;900&display=swap" rel="stylesheet">
+
+		<title>The Sword</title>
 	</head>
 
 	<body>
-		<header>
-			<h1>
-				Text Adventure
-			</h1>
-			        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/logout">Login</a>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
-		</header>
-		<main>
-			{{{body}}}
-		</main>
-		<footer>
-		</footer>
+		{{{body}}}
 	</body>
 
 </html>
