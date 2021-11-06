@@ -1,1 +1,63 @@
-<div> This is where the game should be displayed</div>
+{{!-- {{#each users as |user| }}
+<div>
+  <div>
+    <h2>{{user.username}}</h2>
+  </div>
+</div>
+{{/each}} --}}
+
+		{{!-- <header>
+			<h1>
+				The Sword
+			</h1> --}}
+			        <!-- Conditionally render login or logout links -->
+        {{#if loggedIn}}
+						<a class='nav' id='logout' href='#'>Logout</a>
+					{{else}}
+						<a class='nav' href='/login'>Login</a>
+					{{/if}}
+		{{!-- </header> --}}
+
+<main>
+
+  <section>
+
+      <div id="intro">
+        
+          <h1>The Sword</h1>
+          <h2>Which choices speak to you?</h2>
+
+        <div id="form">
+          <div>
+            <form>
+              <h3>Login</h3>
+                <input class="form-input" type="text" id="username-login" placeholder="USERNAME"/>
+                <input class="form-input" type="password" id="password-login" placeholder="PASSWORD"/>
+                <button class="submit" type="submit">LOG IN</button>
+            </form>
+          </div>
+
+          <div>
+            <form>
+              <h3>Signup</h3>
+                <input class="form-input" type="text" id="username-signup" placeholder="NEW USERNAME"/>
+                <input class="form-input" type="password" id="password-signup" placeholder="NEW PASSWORD"/>
+                <button class="submit" type="submit">SIGN UP</button>
+            </form>
+          </div>
+        </div>
+
+      <footer>
+
+        <h5>UTSA CODING BOOT CAMP 2021-22</h5>
+        <p>AN ADVENTURE BY NATASHA ORTIZ, BRIGITTE POWERS, AND GREG ZARAGOZA</p>
+      </footer>
+
+      </div>
+
+      <div id="image"></div>
+
+  </section>
+
+
+</main>

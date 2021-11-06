@@ -1,35 +1,24 @@
 <html lang='en'>
 
 	<head>
-		<meta charset='UTF-8' />
-		<meta http-equiv='X-UA-Compatible' content='IE=edge' />
-		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+
+		<meta charset='UTF-8'/>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+		<link rel="stylesheet" href="/css/style.css">
+
+		<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;600;900&display=swap" rel="stylesheet">
+
 		<title>The Sword</title>
-		{{! <link rel='stylesheet' href='/css/style.css' /> }}
 	</head>
 	<body>
-		<div class='wrapper'>
-			<header class='hero'>
-				<nav class='navbar'>
-					<a class='link' href='/'>Home</a>
-					<a class='link' href='/dashboard'>Dashboard</a>
-					{{#if logged_in}}
-						<a class='link' id='logout' href='/logout'>Logout</a>
-					{{else}}
-						<a class='link' href='/login'>Login</a>
-					{{/if}}
-				</nav>
-				<h1 class='title'>The Sword</h1>
-			</header>
-		</div>
-		<div class='wrapper'>
-			<main>
-				{{{body}}}
-			</main>
-		</div>
+		{{{body}}}
+	</body>
 
 		{{#if logged_in}}
 			<script src='/js/logout.js'></script>
+    {{else}}   
+      <script src='/js/signup.js'></script>
+      <script src="./js/login.js"></script>
 		{{/if}}
 	</body>
 </html>
