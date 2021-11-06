@@ -2,23 +2,34 @@
 
 	<head>
 		<meta charset='UTF-8' />
+		<meta http-equiv='X-UA-Compatible' content='IE=edge' />
 		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-		<title>Test</title>
-		{{! <link rel="stylesheet" href="/css/jass.css"> }}
+		<title>The Sword</title>
+		{{! <link rel='stylesheet' href='/css/style.css' /> }}
 	</head>
-
 	<body>
-		<header>
-			<h1>
-				Text Adventure
-			</h1>
-			{{!-- {{/if}} --}}
-		</header>
-		<main>
-			{{{body}}}
-		</main>
-		<footer>
-		</footer>
-	</body>
+		<div class='wrapper'>
+			<header class='hero'>
+				<nav class='navbar'>
+					<a class='link' href='/'>Home</a>
+					<a class='link' href='/dashboard'>Dashboard</a>
+					{{#if logged_in}}
+						<a class='link' id='logout' href='/logout'>Logout</a>
+					{{else}}
+						<a class='link' href='/login'>Login</a>
+					{{/if}}
+				</nav>
+				<h1 class='title'>The Sword</h1>
+			</header>
+		</div>
+		<div class='wrapper'>
+			<main>
+				{{{body}}}
+			</main>
+		</div>
 
+		{{#if logged_in}}
+			<script src='/js/logout.js'></script>
+		{{/if}}
+	</body>
 </html>
