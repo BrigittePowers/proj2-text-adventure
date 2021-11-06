@@ -1,6 +1,7 @@
 <html lang='en'>
 
 	<head>
+
 		<meta charset='UTF-8'/>
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
 		<link rel="stylesheet" href="/css/style.css">
@@ -9,9 +10,15 @@
 
 		<title>The Sword</title>
 	</head>
-
 	<body>
 		{{{body}}}
 	</body>
 
+		{{#if logged_in}}
+			<script src='/js/logout.js'></script>
+    {{else}}   
+      <script src='/js/signup.js'></script>
+      <script src="./js/login.js"></script>
+		{{/if}}
+	</body>
 </html>

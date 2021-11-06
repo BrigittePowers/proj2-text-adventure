@@ -11,11 +11,11 @@
 				The Sword
 			</h1> --}}
 			        <!-- Conditionally render login or logout links -->
-        {{!-- {{#if logged_in}}
-        <a href="/log">Login</a>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}} --}}
+        {{#if loggedIn}}
+						<a class='nav' id='logout' href='#'>Logout</a>
+					{{else}}
+						<a class='nav' href='/login'>Login</a>
+					{{/if}}
 		{{!-- </header> --}}
 
 <main>
@@ -61,7 +61,3 @@
 
 
 </main>
-
-
-
-<script src="./js/login.js"></script>

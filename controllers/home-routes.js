@@ -1,18 +1,20 @@
 const router = require('express').Router();
+const sequelize = require('../config/connection');
 const { User, Story } = require('../models');
+const withAuth = require('../utils/auth');
 
-// test .get
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
 	try {
 		const userData = await User.findAll({
-			// attributes: { exclude: ['password'] },
-			order: [['id', 'ASC']],
+			attributes: { exclude: ['password'] },
+			order: [['username', 'ASC']],
 		});
 
 		const users = userData.map((project) => project.get({ plain: true }));
 
 		res.render('homepage', {
 			users,
+			logged_in: req.session.logged_in,
 		});
 	} catch (err) {
 		res.status(500).json(err);
@@ -50,16 +52,6 @@ router.get('/login', (req, res) => {
 
 // signup
 router.get('/signup', (req, res) => {
-	res.render('signup');
-});
-
-// new game + route to renter title screen
-router.get('/newgame', (req, res) => {
-	res.render('signup');
-});
-
-// continue game + event listener would change the route w handlebars to whatever room a player left off
-router.get('/continue', (req, res) => {
 	res.render('signup');
 });
 
