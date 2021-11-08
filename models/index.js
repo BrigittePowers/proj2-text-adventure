@@ -3,19 +3,22 @@ const Answer = require('./Answer');
 const Story = require('./Story');
 const Choice = require('./Choice');
 
-User.hasMany(Answer, {
+Story.hasMany(Choice, {
 });
 
-Choice.belongsTo(Story, {
+Choice.hasOne(Story, {
 });
 
 Choice.hasMany(Answer, {
 });
 
-Answer.belongsTo(User, {
+User.hasMany(Answer, {
 });
 
-Answer.belongsTo(Choice, {
+Answer.hasOne(User, {
+});
+
+Answer.hasOne(Choice, {
 });
 
 
