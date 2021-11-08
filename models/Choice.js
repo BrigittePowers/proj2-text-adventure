@@ -11,16 +11,16 @@ Choice.init(
 			primaryKey: true,
 			autoIncrement: true,
 		},
+		content: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
 		story_id: {
 			type: DataTypes.INTEGER,
 			references: {
 				model: 'story',
 				key: 'id',
 			},
-		},
-		content: {
-			type: DataTypes.STRING,
-			allowNull: false
 		},
 	},
 	{

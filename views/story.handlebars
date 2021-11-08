@@ -5,9 +5,10 @@
 
     <div id='story'>
         <h4>{{story.content}}</h4>
-        {{#each choices as |choice}}
-        {{!-- button choices go here --}}
+        {{#each story.choices as |choice|}}
+        {{> choice-details}}
         {{/each}}
+        <p>Does this even render on-screen?</p>
     </div>
 
     <div id='image'><img src="/assets/{{story.filename}}"></div>

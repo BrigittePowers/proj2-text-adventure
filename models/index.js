@@ -9,17 +9,17 @@ Story.hasMany(Choice, {
 Choice.belongsTo(Story, {
 });
 
-Choice.hasMany(Answer, {
-});
+// Choice.hasMany(Answer, {
+// });
 
-User.hasMany(Answer, {
-});
+// User.hasMany(Answer, {
+// });
 
-Answer.hasOne(User, {
-});
+// Answer.hasOne(User, {
+// });
 
-Answer.hasOne(Choice, {
-});
+// Answer.hasOne(Choice, {
+// });
 
 
-module.exports = { User, Answer, Story };
+module.exports = { User, Answer, Story, Choice };

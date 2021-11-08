@@ -8,5 +8,15 @@
         "id": "2",
         "content": "Your curiosity steers you toward the falls.",
         "story_id": "1"
+    },
+    {
+        "id": "3",
+        "content": "Choice for second story page",
+        "story_id": "2"
+    },
+    {
+        "id": "4",
+        "content": "Second choice for second story page",
+        "story_id": "2"
     }
 ]

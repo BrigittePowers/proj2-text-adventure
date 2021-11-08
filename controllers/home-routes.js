@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Story } = require('../models');
+const { User, Story, Choice } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -20,12 +20,40 @@ router.get('/', async (req, res) => {
 //test Story .get
 router.get('/story/:id', async (req, res) => {
 	try {
-		const storyData = await Story.findByPk(req.params.id);
+		const storyData = await Story.findByPk(req.params.id, {
+			include: [
+				{
+					model: Choice,
+					attributes: [
+						'id',
+						'content',
+					],
+				},
+			],
+		});
+
+		// const storyData = await Story.findByPk(req.params.id);
 
 		const story = storyData.get({ plain: true });
 
+		// res.json(storyData);
+
+		// const storyChoices = await Choice.findAll({
+		// 	include: [
+		// 		{ model: Story }
+		// 	],
+		// 	where: {
+		// 		story_id: story.id
+		// 	}
+		// })
+
+
+		// const choices = storyChoices.map((data) => data.get({ plain: true }));
+
+		// res.json(storyChoices);
+
 		res.render('story', {
-			story,
+			story
 			// logged_in: req.session.logged_in,
 			// username: Post.user_id,
 		});
