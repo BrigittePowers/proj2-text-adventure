@@ -21,6 +21,9 @@ Story.init(
 				type: DataTypes.STRING,
 				allowNull: false
 			},
+        filename: {
+			type: DataTypes.STRING
+		}
 			sequelize,
 			timestamps: false,
 			freezeTableName: true,

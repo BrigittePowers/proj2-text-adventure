@@ -16,7 +16,7 @@ const loginFormHandler = async (event) => {
 
 		// redirect to route after success
 		if (response.ok) {
-			document.location.replace('/api/story');
+			document.location.replace('/dashboard');
 		} else {
 			alert('Failed to log in');
 		}

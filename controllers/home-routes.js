@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
 const { User, Story } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -27,11 +26,11 @@ router.get('/story/:id', async (req, res) => {
 
 		res.render('story', {
 			story,
-			logged_in: req.session.logged_in,
-			username: Post.user_id,
+			// logged_in: req.session.logged_in,
+			// username: Post.user_id,
 		});
 
-		res.status(200).json(story);
+		// res.status(200).json(story);
 	} catch (err) {
 		console.log(err);
 		res.status(500).json(err);
