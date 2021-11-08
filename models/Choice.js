@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Story extends Model {}
+class Choice extends Model {}
 
-Story.init(
+Choice.init(
 	{
 		id: {
 			type: DataTypes.INTEGER,
@@ -11,10 +11,10 @@ Story.init(
 			primaryKey: true,
 			autoIncrement: true,
 		},
-		choice_id: {
+		story_id: {
 			type: DataTypes.INTEGER,
 			references: {
-				model: 'choice',
+				model: 'story',
 				key: 'id',
 			},
 			content: {
@@ -25,9 +25,9 @@ Story.init(
 			timestamps: false,
 			freezeTableName: true,
 			underscored: true,
-			modelName: 'story'
-		},
+			modelName: 'choice',
+		}
 	}
 );
 
-module.exports = Story;
+module.exports = Choice;
