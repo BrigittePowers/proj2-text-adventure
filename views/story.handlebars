@@ -1,7 +1,17 @@
-<div> story goes here </div>
+{{!-- <button class='submit' id='logout' type='submit'>LOG OUT</button>
 
-<p>{{story.content}}</p>
+<script src='/js/logout.js'></script> --}}
+<section>
 
-<button class='submit' id='logout' type='submit'>LOG OUT</button>
+    <div id='story'>
+        <h4>{{story.content}}</h4>
+        {{#each choices as |choice}}
+        {{!-- button choices go here --}}
+        {{/each}}
+    </div>
+
+    <div id='image'><img src="/assets/{{story.filename}}"></div>
+
+</section>
 
 <script src='/js/logout.js'></script>

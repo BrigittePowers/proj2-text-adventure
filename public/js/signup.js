@@ -15,7 +15,7 @@ async function signupFormHandler(event) {
 		});
 		if (response.ok) {
 			// redirect to route after success
-			document.location.replace('/api/story');
+			document.location.replace('/dashboard');
 		} else {
 			alert(response.statusText);
 		}

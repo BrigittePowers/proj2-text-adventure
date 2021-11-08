@@ -5,65 +5,48 @@
 }
 
 html, body {
-    height: 100%;
+    /* height: 100%; */
     scroll-behavior: smooth;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Assistant', sans-serif;
     background-color: black;
     color: white;
 }
 
 main {
     height: 100%;
-}
-
-section {
-    display: flex;
-    height: 100%;
-}
-
-section div {
-    width: 50%;
-    flex-grow: 1;
-}
-
-#intro, #image {
-    width: 100%;
-    flex-grow: 1;
     padding: 100px;
-}
-
-#intro {
-    background-color: darkslategrey;
-}
-
-h1, h2 {
-    display: block;
-    text-align: center;
+    background-image: url("../../assets/thesword-homepage.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 h1 {
-    font-size: 100pt;
+    display: block;
+    text-align: center;
+    font-size: 350pt;
     font-weight: bold;
-}
-
-h2 {
-    margin-top: 35px;
-    font-size: 35pt;
-    font-weight: 300;
+    font-family: 'Medula One', cursive;
+    letter-spacing: 5pt;
 }
 
 #form {
-    margin-top: 300px;
+    background-color: black;
+    opacity: 75%;
+    border: 1px solid #fff693;
+    margin: 0 auto;
+    margin-top: 100px;
     padding: 0;
     display: flex;
-    width: 100%;
+    width: 50%;
     align-items: center;
 }
 
 #form div {
+    padding: 25px;
     margin: 0 auto;
-    padding-left: 30px;
-    padding-right: 30px;
+    /* padding-left: 30px;
+    padding-right: 30px; */
 }
 
 input {
@@ -101,10 +84,44 @@ input {
     cursor: pointer;
 }
 
-#image {
-    background-image: url("../../assets/shutterstock_782968639.jpg");
-    background-size: cover;
-    background-position: center;
+section {
+    /* padding: 0px; */
+    display: flex;
+    /* height: 80%; */
+    /* height: 75%;
+    width: 50%; */
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /* top: 50%; */
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+    /* border: 1px solid #fff693; */
+}
+
+section div {
+    width: 50%;
+    flex-grow: 1;
+}
+
+#story, #image {
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+    padding: 150px;
+}
+
+#story h4 {
+    font-size: 36px;
+    font-weight: 100;
+}
+
+#image img {
+    max-width: 900px;
+    max-height: 900px;
+    /* display: block; */
 }
 
 footer {

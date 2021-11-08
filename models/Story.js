@@ -14,6 +14,9 @@ Story.init(
 		content: {
 			type: DataTypes.STRING,
 			allowNull: false,
+		},
+		filename: {
+			type: DataTypes.STRING
 		}
 	},
 	{
