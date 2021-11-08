@@ -17,20 +17,22 @@ Answer.init(
 				model: 'user',
 				key: 'id',
 			},
-			choices_id: {
-				type: DataTypes.INTEGER,
-			},
-			content: {
-				type: DataTypes.STRING,
-				allowNull: false
-			},
-			sequelize,
-			timestamps: false,
-			freezeTableName: true,
-			underscored: true,
-			modelName: 'answer'
 		},
-	}
+		choices_id: {
+			type: DataTypes.INTEGER,
+		},
+		content: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+	},
+	{
+		sequelize,
+		timestamps: false,
+		freezeTableName: true,
+		underscored: true,
+		modelName: 'answer'
+	},
 );
 
 module.exports = Answer;

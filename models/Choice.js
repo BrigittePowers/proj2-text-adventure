@@ -17,16 +17,18 @@ Choice.init(
 				model: 'story',
 				key: 'id',
 			},
-			content: {
-				type: DataTypes.STRING,
-				allowNull: false
-			},
-			sequelize,
-			timestamps: false,
-			freezeTableName: true,
-			underscored: true,
-			modelName: 'choice',
-		}
+		},
+		content: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+	},
+	{
+		sequelize,
+		timestamps: false,
+		freezeTableName: true,
+		underscored: true,
+		modelName: 'choice',
 	}
 );
 

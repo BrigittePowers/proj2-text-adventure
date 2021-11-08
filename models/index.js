@@ -6,7 +6,7 @@ const Choice = require('./Choice');
 Story.hasMany(Choice, {
 });
 
-Choice.hasOne(Story, {
+Choice.belongsTo(Story, {
 });
 
 Choice.hasMany(Answer, {
