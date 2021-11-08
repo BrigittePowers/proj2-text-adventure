@@ -11,23 +11,26 @@ Choice.init(
 			primaryKey: true,
 			autoIncrement: true,
 		},
+		content: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
 		story_id: {
 			type: DataTypes.INTEGER,
 			references: {
 				model: 'story',
 				key: 'id',
 			},
-			content: {
-				type: DataTypes.STRING,
-				allowNull: false
-			},
+		},
+	},
+	{
 			sequelize,
 			timestamps: false,
 			freezeTableName: true,
 			underscored: true,
 			modelName: 'choice',
-		}
 	}
+
 );
 
 module.exports = Choice;
