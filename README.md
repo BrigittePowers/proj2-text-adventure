@@ -23,7 +23,7 @@ The Sword is an interactive adventure game / walking sim designed to showcase au
 -   Be able to run through a completed game cycle
 -   A dashboard that shows a player's previous decisions
 -   At least 2 possible branching paths so the player has meaningful choice
--   Post player choices to the database and be able to recall them on the dashboard and for furutre development use
+-   Post player choices to the database and be able to recall them on the dashboard and for future development use
 -   Players can sign-up or login to view previous data or begin another game loop.
 -   Player information and passwords are protected by security implenetation
 -   Responsive, clean UI
