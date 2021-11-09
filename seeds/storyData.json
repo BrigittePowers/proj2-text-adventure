@@ -1,12 +1,37 @@
 [
-	{
-		"id": 1,
-		"content": "It's time to wake up. You lay, paralyzed with delirium, in a dark forest with dense overgrowth. Discerning day and night is almost impossible as any light can barely penetrate the foliage.",
-		"filename": "thesword-homepage.jpg"
-	},
-	{
-		"id": 2,
-		"content": "It's time to wake up. You lay, paralyzed with delirium, in a dark forest with dense overgrowth. Discerning day and night is almost impossible as any light can barely penetrate the foliage.",
-		"filename": "thesword-homepage.jpg"
-	}
+    {
+        "id": 1,
+        "content": "It's time to wake up. You lie, paralyzed by delirium, in a dark forest with dense overgrowth. Discerning between day and night is almost impossible; light barely penetrates the foliage above.",
+        "filename": "thesword-homepage.jpg"
+    },
+    {
+        "id": 2,
+        "content": "Pond text here",
+        "filename": "thesword-homepage.jpg"
+    },
+    {
+        "id": 3,
+        "content": "Waterfall text here",
+        "filename": "thesword-homepage.jpg"
+    },
+    {
+        "id": 4,
+        "content": "It's time to wake up. You lay, paralyzed with delirium, in a dark forest with dense overgrowth. Discerning day and night is almost impossible as any light can barely penetrate the foliage.",
+        "filename": "thesword-homepage.jpg"
+    },
+    {
+        "id": 5,
+        "content": "It's time to wake up. You lay, paralyzed with delirium, in a dark forest with dense overgrowth. Discerning day and night is almost impossible as any light can barely penetrate the foliage.",
+        "filename": "thesword-homepage.jpg"
+    },
+    {
+        "id": 6,
+        "content": "It's time to wake up. You lay, paralyzed with delirium, in a dark forest with dense overgrowth. Discerning day and night is almost impossible as any light can barely penetrate the foliage.",
+        "filename": "thesword-homepage.jpg"
+    },
+    {
+        "id": 7,
+        "content": "It's time to wake up. You lay, paralyzed with delirium, in a dark forest with dense overgrowth. Discerning day and night is almost impossible as any light can barely penetrate the foliage.",
+        "filename": "thesword-homepage.jpg"
+    }
 ]

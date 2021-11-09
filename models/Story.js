@@ -17,6 +17,7 @@ Story.init(
 		filename: {
 			type: DataTypes.STRING,
 		},
+
 	},
 	{
 		sequelize,

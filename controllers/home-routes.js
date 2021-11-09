@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Story } = require('../models');
+const { User, Story, Choice } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -17,38 +17,27 @@ router.get('/', async (req, res) => {
 	}
 });
 
-//test Story .get
 router.get('/story/:id', async (req, res) => {
 	try {
-		const storyData = await Story.findByPk(req.params.id);
-
-		const story = storyData.get({ plain: true });
-
-		res.render('story', {
-			story,
-			// logged_in: req.session.logged_in,
-			// username: Post.user_id,
+		const storyData = await Story.findByPk(req.params.id, {
+			include: [
+				{
+					model: Choice,
+					attributes: [
+						'id',
+						'content',
+					],
+				},
+			],
 		});
 
-		// res.status(200).json(story);
+		const story = storyData.get({ plain: true });
+		res.render('story', { story });
+
 	} catch (err) {
 		console.log(err);
 		res.status(500).json(err);
 	}
 });
-
-// // login
-// router.get('/login', (req, res) => {
-// 	if (req.session.loggedIn) {
-// 		res.redirect('/');
-// 		return;
-// 	}
-// 	res.render('login');
-// });
-
-// // signup
-// router.get('/signup', (req, res) => {
-// 	res.render('signup');
-// });
 
 module.exports = router;
