@@ -7,17 +7,17 @@ const choiceData = require('./choiceData.json');
 const answerData = require('./answerData.json');
 
 const seedDatabase = async () => {
-  await sequelize.sync({ force: true });
+	await sequelize.sync({ force: true });
 
-  await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+	await User.bulkCreate(userData, {
+		individualHooks: true,
+		returning: true,
+	});
 
-  await Story.bulkCreate(storyData, {
-    individualHooks: true,
-    returning: true,
-  });
+	await Story.bulkCreate(storyData, {
+		individualHooks: true,
+		returning: true,
+	});
 
   await Choice.bulkCreate(choiceData, {
     individualHooks: true,

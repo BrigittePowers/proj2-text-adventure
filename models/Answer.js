@@ -22,8 +22,8 @@ Answer.init(
 			type: DataTypes.INTEGER,
 			references: {
 				model: 'choice',
-				key: 'id'
-			}
+				key: 'id',
+			},
 		},
 	},
 	{
@@ -31,7 +31,8 @@ Answer.init(
 		timestamps: false,
 		freezeTableName: true,
 		underscored: true,
-		modelName: 'answer'
+		modelName: 'answer',
+
 	},
 );
 

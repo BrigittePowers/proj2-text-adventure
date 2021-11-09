@@ -9,7 +9,10 @@ Choice.init(
 			type: DataTypes.INTEGER,
 			allowNull: false,
 			primaryKey: true,
-			autoIncrement: true,
+		},
+		content: {
+			type: DataTypes.STRING,
+			allowNull: false,
 		},
 		content: {
 			type: DataTypes.STRING,
@@ -29,7 +32,7 @@ Choice.init(
 		freezeTableName: true,
 		underscored: true,
 		modelName: 'choice',
-	}
+	},
 );
 
 module.exports = Choice;
