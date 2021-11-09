@@ -1,9 +1,28 @@
 <!-- nothing here yet! Would probably show info for answers the player made last run || or on every next run -->
 
-<div><h2>Dashboard</h2></div>
+<div class='wrapper'>
+	<h2>Welcome {{dbData.user}}</h1>
+    <button class='submit' id='newgame-btn'>BEGIN GAME</button>
+    
+    <div class='statistics-card'>
+        <h3>Last Round:</h3>
+        <p>When asked to make a choices last playthrough, you answered...</p>
+        <ul>
+        {{#each dbData.answers as |answer|}}
+        <p>{{answer}}</p>
+        {{!-- <li>{{> dashboard-answerinfo answer}}</li> --}}
+        {{/each}}
+        </ul>
+        
+    </div>
 
-<div><p>Info</p></div>
-<div><p>Info</p></div>
-<div><p>Info</p></div>
+</div>
 
-<button class="submit">BEGIN GAME</button>
+<footer>
+
+	<h5>UTSA CODING BOOT CAMP 2021-22</h5>
+	<p>A MINI TEXT ADVENTURE BY NATASHA ORTIZ, BRIGITTE POWERS, AND GREG
+		ZARAGOZA</p>
+</footer>
+
+<script src='/js/newgame.js'></script>
