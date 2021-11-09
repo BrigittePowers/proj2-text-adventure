@@ -20,10 +20,10 @@ Answer.init(
 		},
 		choices_id: {
 			type: DataTypes.INTEGER,
-		},
-		content: {
-			type: DataTypes.STRING,
-			allowNull: false
+			references: {
+				model: 'choice',
+				key: 'id'
+			}
 		},
 	},
 	{

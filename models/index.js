@@ -4,22 +4,28 @@ const Story = require('./Story');
 const Choice = require('./Choice');
 
 Story.hasMany(Choice, {
+    foreignKey: 'story_id',
 });
 
 Choice.belongsTo(Story, {
+    foreignKey: 'story_id',
 });
 
-// Choice.hasMany(Answer, {
-// });
+User.hasMany(Answer, {
+    foreignKey: 'user_id',
+});
 
-// User.hasMany(Answer, {
-// });
+Answer.belongsTo(User, {
+    foreignKey: 'user_id',
+});
 
-// Answer.hasOne(User, {
-// });
+Choice.hasMany(Answer, {
+    foreignKey: 'choice_id',
+});
 
-// Answer.hasOne(Choice, {
-// });
+Answer.belongsTo(Choice, {
+    foreignKey: 'choice_id',
+});
 
 
 module.exports = { User, Answer, Story, Choice };
