@@ -1,8 +1,9 @@
 const newAnswer = async (event) => {
     //  CHOICE option has ID attribute
 
-    if (event.target.hasAttribute('id')) {
-        const choices_id = event.target.getAttribute('id');
+    if (event.target.hasAttribute('data-id')) {
+        const choices_id = event.target.getAttribute('data-id');
+        // const choices_id = event.target.getAttribute('id');
 
         const response = await fetch('/api/answers/', {
             method: 'POST',
@@ -13,7 +14,7 @@ const newAnswer = async (event) => {
         });
 
         if (response.ok) {
-			document.location.replace('/dashboard');
+			document.location.reload;
 		} else {
 			alert('Failed to record answer.');
 		}

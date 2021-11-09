@@ -5,6 +5,7 @@ const Choice = require('./Choice');
 
 Story.hasMany(Choice, {
     foreignKey: 'story_id',
+    onDelete: 'CASCADE'
 });
 
 Choice.belongsTo(Story, {
@@ -13,18 +14,20 @@ Choice.belongsTo(Story, {
 
 User.hasMany(Answer, {
     foreignKey: 'user_id',
+    onDelete: 'CASCADE'
 });
 
 Answer.belongsTo(User, {
     foreignKey: 'user_id',
 });
 
-Choice.hasMany(Answer, {
-    foreignKey: 'choice_id',
+Choice.hasOne(Answer, {
+    foreignKey: 'choices_id',
+    onDelete: 'CASCADE'
 });
 
 Answer.belongsTo(Choice, {
-    foreignKey: 'choice_id',
+    foreignKey: 'choices_id',
 });
 
 
