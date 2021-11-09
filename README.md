@@ -77,9 +77,13 @@ Submit a pull request (bug fixes only) or send an email. Writers and routers wel
 This project is made by Natasha Ortiz, Greg Zaragoza, and Brigitte Powers as part of the Summer 2021 UTSA Coding Bootcamp.
 
 Server Admin: Brigitte Powers
+
 Route Manager: Greg Zaragoza
+
 Model Controller: Natasha Ortiz
+
 Planning, organizing, blood, sweat, and tears (so many tears): Everyone
+
 Story Author: Natasha Ortiz
 
 CSS in collaboration with Tailwind and animate.style CSS. 
