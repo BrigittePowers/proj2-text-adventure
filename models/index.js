@@ -3,6 +3,7 @@ const Answer = require('./Answer');
 const Story = require('./Story');
 const Choice = require('./Choice');
 
+
 Story.hasMany(Choice, {
     foreignKey: 'story_id',
     onDelete: 'CASCADE'
@@ -30,5 +31,7 @@ Answer.belongsTo(Choice, {
     foreignKey: 'choices_id',
 });
 
+
+// Answer.hasOne(Story, {});
 
 module.exports = { User, Answer, Story, Choice };
