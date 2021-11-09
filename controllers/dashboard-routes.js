@@ -3,44 +3,28 @@ const sequelize = require('../config/connection');
 const { User, Answer, Choice, Story } = require('../models');
 const withAuth = require('../utils/auth');
 
-// Unfinished try/catch block worked on w peter
-// router.get('/', withAuth, (req, res) => {
-// 	Promise.all([
-// 		Answer.findAll({
-// 			where: {
-// 				user_id: req.session.user_id,
-// 			},
-// 			attributes: ['id', 'user_id', 'choice_id'],
-// 		}),
-// 		User.findOne({
-// 			where: {
-// 				id: req.session.user_id,
-// 			},
-// 		}).catch,
-// 	]);
-// });
-
-// add session object
-
-// THIS ROUTE WORKS BUT TRY TO MAKE A TRY/CATCH
 router.get('/', withAuth, (req, res) => {
 	Answer.findAll({
 		where: {
 			user_id: req.session.user_id,
 		},
-		attributes: ['id', 'user_id', 'choice_id'],
+		attributes: ['id', 'user_id', 'choices_id'],
 		include: [
 			{
 				model: Choice,
 				attributes: ['id', 'content', 'story_id'],
+				include: {
+					model: Story,
+					attributes: ['id', 'content', 'filename'],
+				},
 			},
 			{
 				model: User,
 				attributes: ['username'],
 			},
 			{
-				model: Story,
-				attributes: ['content', 'filename'],
+				model: User,
+				attributes: ['username'],
 			},
 		],
 	})
@@ -48,8 +32,9 @@ router.get('/', withAuth, (req, res) => {
 			const answers = dbAnswerData.map((answer) =>
 				answer.get({ plain: true }),
 			);
+
 			const dbData = {
-				user: answers[0].user.username,
+				user: req.session.username,
 				answers: [...answers],
 			};
 			res.render('dashboard', { dbData, loggedIn: true });

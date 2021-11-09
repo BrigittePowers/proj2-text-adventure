@@ -11,7 +11,9 @@ Answer.belongsTo(User, {
 	foreignKey: 'user_id',
 });
 
-Answer.belongsTo(Choice, {});
+Answer.belongsTo(Choice, {
+	foreignKey: 'choices_id',
+});
 
 Choice.belongsTo(Story, {});
 

@@ -1,20 +1,20 @@
 <!-- nothing here yet! Would probably show info for answers the player made last run || or on every next run -->
 
 <div class='wrapper'>
-	<h2>Welcome {{dbData.user}}</h1>
-    <button class='submit' id='newgame-btn'>BEGIN GAME</button>
-    
-    <div class='statistics-card'>
-        <h3>Last Round:</h3>
-        <p>When asked to make a choices last playthrough, you answered...</p>
-        <ul>
-        {{#each dbData.answers as |answer|}}
-        <p>{{answer}}</p>
-        {{!-- <li>{{> dashboard-answerinfo answer}}</li> --}}
+	<h2 class='welcome animate__animated animate__slower animate__pulse'>Welcome {{dbData.user}}</h1>
+    <button class='submit btn' id='newgame-btn'>BEGIN GAME</button>
+
+    {{#if dbData.answers.length}}
+    <div class='statistics-card animate__animated animate__slower animate__fadeIn animate__delay-1s'>
+        <h3 class='loop-msg'>Last loop, you chose...:</h3>
+        {{#each dbData.answers}}
+        <p class='story-ctnt'>{{choice.story.content}}</p>
+        <p class='choice-ctnt'>{{choice.content}}</p>
         {{/each}}
-        </ul>
-        
     </div>
+    {{else}}
+    <p id='no-stats'>You've no choice but to venture forth.</p>
+    {{/if}}
 
 </div>
 
