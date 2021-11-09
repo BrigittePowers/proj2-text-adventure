@@ -118,6 +118,25 @@ section div {
     font-weight: 100;
 }
 
+#story-choices {
+    width: 100%;
+    margin-top: 40px;
+}
+
+#story a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 18pt;
+    font-weight: 600;
+    transition: 0.25s ease-in-out;
+}
+
+a:hover {
+    color: #fff693;
+    text-shadow: 0 0 3px white, 0 0 3px white;
+}
+
 #image img {
     max-width: 900px;
     max-height: 900px;

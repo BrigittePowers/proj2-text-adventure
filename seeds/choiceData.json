@@ -18,5 +18,15 @@
         "id": "4",
         "content": "Second choice for second story page",
         "story_id": "2"
+    },
+    {
+        "id": "5",
+        "content": "Choice for third story page",
+        "story_id": "3"
+    },
+    {
+        "id": "6",
+        "content": "Second choice for third story page",
+        "story_id": "3"
     }
 ]
