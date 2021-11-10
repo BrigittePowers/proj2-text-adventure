@@ -6,7 +6,7 @@ const newAnswer = async (event) => {
 		const choices_id = event.target.getAttribute('data-id');
 		// const choices_id = event.target.getAttribute('id');
 
-		const response = await fetch('/api/answers/', {
+		const response = await fetch(`/api/answers/`, {
 			method: 'POST',
 			body: JSON.stringify({ choices_id }),
 			headers: {
@@ -22,4 +22,4 @@ const newAnswer = async (event) => {
 	}
 };
 
-document.querySelector('.story-choices').addEventListener('click', newAnswer);
+document.querySelector('#story-choices').addEventListener('click', newAnswer);

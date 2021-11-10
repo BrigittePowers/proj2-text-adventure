@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 	}
 });
 
-router.get('/story/:id', async (req, res) => {
+router.get('/story/:id', withAuth, async (req, res) => {
 	try {
 		const storyData = await Story.findByPk(req.params.id, {
 			include: [
