@@ -1,22 +1,16 @@
 <section>
 
     <div id='story'>
-        <h4>{{story.content}}</h4>
-            <div id="story-choices">
+        <h4 class='animate__animated animate__slower animate__fadeIn'>{{story.content}}</h4>
+            <div id="story-choices" class='animate__animated animate__slower animate__fadeIn'>
                 {{#each story.choices as |choice|}}
                 {{> choice-details}}
                 {{/each}}
             </div>
     </div>
 
-    <div id='image'><img src="/assets/{{story.filename}}"></div>
+    <div id='image' class='animate__animated animate__slower animate__fadeIn animate__delay-1s'><img src="/assets/{{story.filename}}"></div>
 
 </section>
 
-<<<<<<< HEAD
-{{!-- {{#if story.content}} --}}
 <script src='/js/answer.js'></script>
-{{!-- {{/if}} --}}
-=======
-<script src='/js/answer.js'></script>
->>>>>>> a2d1d76fa4e5981b7ad0378a6e3db1b19eefd2de
