@@ -9,22 +9,22 @@ Story.init(
 			type: DataTypes.INTEGER,
 			allowNull: false,
 			primaryKey: true,
-			autoIncrement: true,
 		},
 		content: {
 			type: DataTypes.STRING,
-			allowNull: false
+			allowNull: false,
 		},
 		filename: {
-			type: DataTypes.STRING
-		}
+			type: DataTypes.STRING,
+		},
+
 	},
 	{
 		sequelize,
 		timestamps: false,
 		freezeTableName: true,
 		underscored: true,
-		modelName: 'story'
+		modelName: 'story',
 	},
 );
 

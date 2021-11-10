@@ -9,11 +9,10 @@ Choice.init(
 			type: DataTypes.INTEGER,
 			allowNull: false,
 			primaryKey: true,
-			autoIncrement: true,
 		},
 		content: {
 			type: DataTypes.STRING,
-			allowNull: false
+			allowNull: false,
 		},
 		story_id: {
 			type: DataTypes.INTEGER,
@@ -24,13 +23,12 @@ Choice.init(
 		},
 	},
 	{
-			sequelize,
-			timestamps: false,
-			freezeTableName: true,
-			underscored: true,
-			modelName: 'choice',
-	}
-
+		sequelize,
+		timestamps: false,
+		freezeTableName: true,
+		underscored: true,
+		modelName: 'choice',
+	},
 );
 
 module.exports = Choice;

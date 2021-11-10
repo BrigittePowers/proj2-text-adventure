@@ -17,7 +17,6 @@ router.get('/', async (req, res) => {
 	}
 });
 
-//test Story .get
 router.get('/story/:id', async (req, res) => {
 	try {
 		const storyData = await Story.findByPk(req.params.id, {
@@ -26,50 +25,19 @@ router.get('/story/:id', async (req, res) => {
 					model: Choice,
 					attributes: [
 						'id',
-						'content'
-					]
-				}
-			]
+						'content',
+					],
+				},
+			],
 		});
 
 		const story = storyData.get({ plain: true });
-
-		// const storyChoices = await Choice.findAll({
-		// 	include: [
-		// 		{ model: Story }
-		// 	],
-		// 	where: {
-		// 		story_id: story.id
-		// 	}
-		// });
-
-		// const choices = storyChoices.map((data) => data.get({ plain: true }));
-
-		res.render('story', {
-			story
-			// choices
-			// logged_in: req.session.logged_in,
-		});
-		// res.json(storyChoices);
+		res.render('story', { story });
 
 	} catch (err) {
 		console.log(err);
 		res.status(500).json(err);
 	}
 });
-
-// // login
-// router.get('/login', (req, res) => {
-// 	if (req.session.loggedIn) {
-// 		res.redirect('/');
-// 		return;
-// 	}
-// 	res.render('login');
-// });
-
-// // signup
-// router.get('/signup', (req, res) => {
-// 	res.render('signup');
-// });
 
 module.exports = router;

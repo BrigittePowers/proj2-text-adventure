@@ -20,20 +20,20 @@ Answer.init(
 		},
 		choices_id: {
 			type: DataTypes.INTEGER,
-		},
-		content: {
-			type: DataTypes.STRING,
-			allowNull: false
+			references: {
+				model: 'choice',
+				key: 'id',
+			},
 		},
 	},
 	{
-			sequelize,
-			timestamps: false,
-			freezeTableName: true,
-			underscored: true,
-			modelName: 'answer'
-	}
+		sequelize,
+		timestamps: false,
+		freezeTableName: true,
+		underscored: true,
+		modelName: 'answer',
 
+	},
 );
 
 module.exports = Answer;

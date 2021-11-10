@@ -3,25 +3,35 @@ const Answer = require('./Answer');
 const Story = require('./Story');
 const Choice = require('./Choice');
 
+
 Story.hasMany(Choice, {
     foreignKey: 'story_id',
+    onDelete: 'CASCADE'
 });
 
 Choice.belongsTo(Story, {
     foreignKey: 'story_id',
 });
 
-// Choice.hasMany(Answer, {
-// });
+User.hasMany(Answer, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+});
 
-// User.hasMany(Answer, {
-// });
+Answer.belongsTo(User, {
+    foreignKey: 'user_id',
+});
 
-// Answer.hasOne(User, {
-// });
+Choice.hasOne(Answer, {
+    foreignKey: 'choices_id',
+    onDelete: 'CASCADE'
+});
 
-// Answer.hasOne(Choice, {
-// });
+Answer.belongsTo(Choice, {
+    foreignKey: 'choices_id',
+});
 
+
+// Answer.hasOne(Story, {});
 
 module.exports = { User, Answer, Story, Choice };
