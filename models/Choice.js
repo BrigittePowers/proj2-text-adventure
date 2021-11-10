@@ -1,3 +1,4 @@
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -20,6 +21,10 @@ Choice.init(
 				model: 'story',
 				key: 'id',
 			},
+		},
+		route: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
 		},
 	},
 	{

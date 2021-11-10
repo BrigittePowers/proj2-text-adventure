@@ -23,17 +23,13 @@ router.get('/story/:id', async (req, res) => {
 			include: [
 				{
 					model: Choice,
-					attributes: [
-						'id',
-						'content',
-					],
+					attributes: ['id', 'content', 'route'],
 				},
 			],
 		});
 
 		const story = storyData.get({ plain: true });
 		res.render('story', { story });
-
 	} catch (err) {
 		console.log(err);
 		res.status(500).json(err);
