@@ -6,9 +6,9 @@
 
     {{#if dbData.answers.length}}
     <div class='statistics-card animate__animated animate__slower animate__fadeIn animate__delay-1s'>
-        <h3 class='loop-msg'>Last loop, you chose...:</h3>
+        <h3 class='loop-msg'>So far you've chosen to...</h3>
         {{#each dbData.answers}}
-        <p class='choice-ctnt'>{{choice.content}}</p>
+        <p class='choice-ctnt'>{{this}}</p>
         {{/each}}
     </div>
     {{else}}

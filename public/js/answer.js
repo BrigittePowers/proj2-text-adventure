@@ -13,7 +13,9 @@ const newAnswer = async (event) => {
 			},
 		});
 
-		if (response.ok) {
+		if (response.ok && choices_id > 33) {
+			document.location.replace('/dashboard');
+		} else if (response.ok && choices_id < 34) {
 			document.location.replace(`/story/${route_id}`);
 		} else {
 			alert('Failed to record answer.');
