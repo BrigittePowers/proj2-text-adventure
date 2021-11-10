@@ -33,10 +33,28 @@ router.get('/', withAuth, (req, res) => {
 				answer.get({ plain: true }),
 			);
 
+			let arr = [];
+
+			// filter answer data to remove answers that dont need to be recorded
+			for (let i = 0; i < answers.length; i++) {
+				let a = answers[i].choice.content;
+				let filter = [8, 9, 13, 14, 15, 17, 19, 21, 22, 34, 35];
+				if (!filter.includes(answers[i].choice.id)) {
+					arr.push(a);
+					console.log(arr);
+				}
+			}
+
+			// remove repeats from array
+			var unique = arr.filter(onlyUnique);
+
+			// send array to the dashboard route
 			const dbData = {
 				user: req.session.username,
-				answers: [...answers],
+				answers: [...unique],
 			};
+
+			console.log(dbData.answers);
 			res.render('dashboard', { dbData, loggedIn: true });
 		})
 		.catch((err) => {
@@ -59,5 +77,9 @@ router.get('/answer/:id', async (req, res) => {
 		res.status(500).json(err);
 	}
 });
+
+function onlyUnique(value, index, self) {
+	return self.indexOf(value) === index;
+}
 
 module.exports = router;

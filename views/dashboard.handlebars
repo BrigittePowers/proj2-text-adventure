@@ -7,7 +7,7 @@
         <div class='statistics-card animate__animated animate__slower animate__fadeIn animate__delay-1s'>
             <h3 class='loop-msg'>During your last adventure, you chose to...</h3>
             {{#each dbData.answers}}
-            <p class='choice-ctnt'>{{choice.content}}</p>
+            <p class='choice-ctnt'>{{this}}</p>
             {{/each}}
         </div>
         {{else}}
@@ -15,7 +15,6 @@
         {{/if}}
         
         <button class='submit btn bg-transparent hover:bg-white text-white tracking-wider font-bold hover:text-black border border-white rounded-full cursor-pointer' id='newgame-btn'>BEGIN GAME</button>
-
     </div>
     {{!-- <div><img src="/assets/thesword-homepage.jpg"></div> --}}
 {{!-- </section>     --}}
