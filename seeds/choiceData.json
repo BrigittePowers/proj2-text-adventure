@@ -1,26 +1,38 @@
 [
-    {
-        "content": "Follow the footsteps into the water.",
-        "story_id": "1"
-    },
-    {
-        "content": "Your curiosity steers you toward the falls.",
-        "story_id": "1"
-    },
-    {
-        "content": "Choice for second story page",
-        "story_id": "2"
-    },
-    {
-        "content": "Second choice for second story page",
-        "story_id": "2"
-    },
-    {
-        "content": "Choice for third story page",
-        "story_id": "3"
-    },
-    {
-        "content": "Second choice for third story page",
-        "story_id": "3"
-    }
+	{
+		"id": 1,
+		"content": "Examine flowers.",
+		"story_id": 1,
+		"route": 2
+	},
+	{
+		"id": 2,
+		"content": "Examine scenery.",
+		"story_id": 1,
+		"route": 3
+	},
+	{
+		"id": 3,
+		"content": "Dive into the pond.",
+		"story_id": 2,
+		"route": 4
+	},
+	{
+		"id": 4,
+		"content": "Go behind the waterfall.",
+		"story_id": 2,
+		"route": 5
+	},
+	{
+		"id": 5,
+		"content": "Dive into the pond.",
+		"story_id": 3,
+		"route": 4
+	},
+	{
+		"id": 6,
+		"content": "Go behind the waterfall.",
+		"story_id": 3,
+		"route": 5
+	}
 ]
