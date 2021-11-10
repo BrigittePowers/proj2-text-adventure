@@ -2,9 +2,8 @@ const newAnswer = async (event) => {
 	//  CHOICE option has ID attribute
 
 	if (event.target.hasAttribute('data-id')) {
-		console.log('Found answer to create');
 		const choices_id = event.target.getAttribute('data-id');
-		// const choices_id = event.target.getAttribute('id');
+		const route_id = event.target.getAttribute('data-route');
 
 		const response = await fetch('/api/answers/', {
 			method: 'POST',
@@ -15,11 +14,11 @@ const newAnswer = async (event) => {
 		});
 
 		if (response.ok) {
-			document.location.reload;
+			document.location.replace(`/story/${route_id}`);
 		} else {
 			alert('Failed to record answer.');
 		}
 	}
 };
 
-document.querySelector('.story-choices').addEventListener('click', newAnswer);
+document.querySelector('#story-choices').addEventListener('click', newAnswer);
