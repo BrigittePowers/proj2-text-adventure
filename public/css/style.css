@@ -4,7 +4,8 @@
 	margin: 0;
 }
 
-html, body {
+html,
+body {
 	scroll-behavior: smooth;
 	font-family: 'Assistant', sans-serif;
 	background-color: black;
@@ -47,7 +48,7 @@ h1 {
 	padding: 25px;
 	margin: 0 auto;
 	padding-left: 30px;
-    padding-right: 30px;
+	padding-right: 30px;
 }
 
 input {
@@ -90,14 +91,14 @@ button:active {
 }
 
 section {
-    display: flex;
-    margin: 0 auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    align-items: center;
-    justify-content: center;
-    vertical-align: center;
+	display: flex;
+	margin: 0 auto;
+	/* position: relative;
+	top: 50%;
+	transform: translateY(-50%); */
+	align-items: center;
+	justify-content: center;
+	/* vertical-align: center; */
 }
 
 section div {
