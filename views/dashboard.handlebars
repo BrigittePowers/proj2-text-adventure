@@ -1,27 +1,29 @@
 <!-- nothing here yet! Would probably show info for answers the player made last run || or on every next run -->
+{{!-- <section> --}}
+    <div class='wrapper'>
+        <h1 class='welcome animate__animated animate__slower animate__fadeIn'>Welcome, {{dbData.user}}.</h1>
 
-<div class='wrapper'>
-	<h2 class='welcome animate__animated animate__slower animate__pulse'>Welcome {{dbData.user}}</h1>
-    <button class='submit btn' id='newgame-btn'>BEGIN GAME</button>
-
-    {{#if dbData.answers.length}}
-    <div class='statistics-card animate__animated animate__slower animate__fadeIn animate__delay-1s'>
-        <h3 class='loop-msg'>So far you've chosen to...</h3>
-        {{#each dbData.answers}}
-        <p class='choice-ctnt'>{{this}}</p>
-        {{/each}}
+        {{#if dbData.answers.length}}
+        <div class='statistics-card animate__animated animate__slower animate__fadeIn animate__delay-1s'>
+            <h3 class='loop-msg'>During your last adventure, you chose to...</h3>
+            {{#each dbData.answers}}
+            <p class='choice-ctnt'>{{this}}</p>
+            {{/each}}
+        </div>
+        {{else}}
+        <p id='no-stats'>You've no choice but to venture forth.</p>
+        {{/if}}
+        
+        <button class='submit btn bg-transparent hover:bg-white text-white tracking-wider font-bold hover:text-black border border-white rounded-full cursor-pointer' id='newgame-btn'>BEGIN GAME</button>
     </div>
-    {{else}}
-    <p id='no-stats'>You've no choice but to venture forth.</p>
-    {{/if}}
+    {{!-- <div><img src="/assets/thesword-homepage.jpg"></div> --}}
+{{!-- </section>     --}}
 
-</div>
-
-<footer>
+{{!-- <footer>
 
 	<h5>UTSA CODING BOOT CAMP 2021-22</h5>
 	<p>A MINI TEXT ADVENTURE BY NATASHA ORTIZ, BRIGITTE POWERS, AND GREG
 		ZARAGOZA</p>
-</footer>
+</footer> --}}
 
 <script src='/js/newgame.js'></script>

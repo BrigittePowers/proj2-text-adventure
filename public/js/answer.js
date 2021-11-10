@@ -5,7 +5,7 @@ const newAnswer = async (event) => {
 		const choices_id = event.target.getAttribute('data-id');
 		const route_id = event.target.getAttribute('data-route');
 
-		const response = await fetch('/api/answers/', {
+		const response = await fetch(`/api/answers/`, {
 			method: 'POST',
 			body: JSON.stringify({ choices_id }),
 			headers: {

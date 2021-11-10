@@ -4,9 +4,7 @@
 	margin: 0;
 }
 
-html,
-body {
-	/* height: 100%; */
+html, body {
 	scroll-behavior: smooth;
 	font-family: 'Assistant', sans-serif;
 	background-color: black;
@@ -14,20 +12,16 @@ body {
 }
 
 main {
-	height: 100%;
-	padding: 1%;
-	padding-bottom: 25px;
 	background-image: url('../../assets/thesword-homepage.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: top;
 }
 
 h1 {
 	display: block;
 	text-align: center;
-	font-size: 350pt;
-	font-weight: bold;
+	font-size: 300pt;
 	font-family: 'Medula One', cursive;
 	letter-spacing: 5pt;
 	animation-duration: 10s;
@@ -38,28 +32,31 @@ h1 {
 	opacity: 75%;
 	border: 1px solid #fff693;
 	margin: 0 auto;
-	margin-top: 100px;
+	margin-top: 75px;
 	padding: 0;
-	display: flex;
 	width: 50%;
 	align-items: center;
+}
+
+#form h3 {
+	font-family: 'Medula One', cursive;
+	font-size: 24pt;
 }
 
 #form div {
 	padding: 25px;
 	margin: 0 auto;
-	/* padding-left: 30px;
-    padding-right: 30px; */
+	padding-left: 30px;
+    padding-right: 30px;
 }
 
 input {
 	display: inline;
 	width: 100%;
-	margin-top: 40px;
+	margin-top: 30px;
 	border: none;
 	outline: none;
 	color: white;
-	font-family: 'Barlow', sans-serif;
 	letter-spacing: 1px;
 	background-color: transparent;
 	border-bottom: 1px solid white;
@@ -68,52 +65,39 @@ input {
 
 ::placeholder {
 	color: white;
-	font-family: 'Barlow', sans-serif;
 	letter-spacing: 1px;
 }
 
-.submit {
+button {
 	position: relative;
-	/* top: 5px; */
+	top: 5px;
 	margin-top: 35px;
-	border: 1px solid white;
-	border-radius: 50px;
-	background-color: transparent;
-	color: white;
-	font-weight: bold;
+	font-size: 10pt;
 	letter-spacing: 1px;
-	font-family: 'Barlow', sans-serif;
 	padding: 15px;
-	cursor: pointer;
 }
 
-.submit:hover {
+button:hover {
 	color: white;
 	animation: pulse;
 	animation-duration: 3s;
 }
 
-.submit:active {
+button:active {
 	color: white;
 	animation: fadeOut;
 	animation-duration: 1s;
 }
 
 section {
-	/* padding: 0px; */
-	display: flex;
-	height: 80%;
-	/* height: 75%;
-    width: 50%; */
-	margin: auto;
-	/* position: relative; */
-	/* top: 50%; */
-	/* transform: translateY(-50%); */
-	/* top: 50%; */
-	align-items: center;
-	justify-content: center;
-	vertical-align: center;
-	/* border: 1px solid #fff693; */
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
 }
 
 section div {
@@ -122,13 +106,19 @@ section div {
 }
 
 .wrapper {
-	text-align: center;
+	text-align: left;
+	margin: 200px;
+}
+
+.wrapper img {
+	max-height: 600px;
+	max-width: 600px;
 }
 
 .welcome {
 	padding-top: 5%;
 	display: block;
-	text-align: center;
+	text-align: left;
 	font-size: 65pt;
 	font-weight: bold;
 	font-family: 'Medula One', cursive;
@@ -158,15 +148,13 @@ section div {
 
 #story,
 #image {
-	padding-top: 5%;
-	height: 100%;
 	width: 100%;
 	flex-grow: 1;
 	margin: 150px;
 }
 
 #story h4 {
-	font-size: 36px;
+	font-size: 28pt;
 	font-weight: 100;
 }
 
@@ -192,14 +180,14 @@ a:hover {
 #image img {
 	max-width: 900px;
 	max-height: 900px;
-	/* display: block; */
 }
 
 footer {
-	margin-top: 150px;
+	margin: 75px;
 	text-align: center;
 	letter-spacing: 1pt;
 	line-height: 34px;
+	text-shadow: 0 0 50px black, 0 0 50px black, 0 0 50px black;
 }
 
 footer h5 {
@@ -210,15 +198,7 @@ footer h5 {
 }
 
 #logout {
-	position: relative;
-	margin-top: 35px;
+	margin-left: 200px;
 	border: 1px solid rgb(134, 134, 134);
-	border-radius: 50px;
-	background-color: transparent;
 	color: rgb(134, 134, 134);
-	font-weight: bold;
-	letter-spacing: 1px;
-	font-family: 'Barlow', sans-serif;
-	padding: 15px;
-	cursor: pointer;
 }
