@@ -16,7 +16,7 @@ Choice.init(
 		},
 		content: {
 			type: DataTypes.STRING,
-			allowNull: false
+			allowNull: false,
 		},
 		story_id: {
 			type: DataTypes.INTEGER,
@@ -24,6 +24,10 @@ Choice.init(
 				model: 'story',
 				key: 'id',
 			},
+		},
+		route: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
 		},
 	},
 	{

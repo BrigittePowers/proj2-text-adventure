@@ -11,13 +11,12 @@ Story.init(
 			primaryKey: true,
 		},
 		content: {
-			type: DataTypes.STRING,
+			type: DataTypes.TEXT,
 			allowNull: false,
 		},
 		filename: {
 			type: DataTypes.STRING,
 		},
-
 	},
 	{
 		sequelize,
