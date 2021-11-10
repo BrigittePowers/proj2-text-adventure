@@ -32,7 +32,7 @@
 	{
 		"id": 7,
 		"content": "You decide to briefly explore the tunnel - carefully feeling your way through the darkness. Water trails along the floor of the tunnel, creating a small creek from which you can see the reflection of your flame. You come upon a group of small mushrooms that seem to glow with a slight blue bioluminescence. Your curiosity pushes you to tap one of these mushrooms - and with your touch it’s glow brightens for a few moments and spits some spores on your shoe before dimming again. As you carry on your ears clue you into the noise of a small animal - and when you turn you see a small mouse staring back at you with a grasshopper in its mouth. It growls and scurries away, and you blink - bewildered at the odd sight. At the end of the tunnel you notice some matches in front of the way to the cavern.",
-		"filename": ""
+		"filename": "bio.jpg"
 	},
 	{
 		"id": 8,
@@ -42,27 +42,27 @@
 	{
 		"id": 9,
 		"content": "You notice a number of match stubs left on the ground. You have a feeling you aren't the first person to have come this way.",
-		"filename": ""
+		"filename": "match.jpg"
 	},
 	{
 		"id": 10,
 		"content": "As you step into the cavern you notice the vastness of it as well as a large imposing door with intricate designs woven into it - seemingly made from some type of strange, glistening metal. You try to open the door and find that it is locked. Your eyes draw you to different elements within the room: a gigantic, towering mushroom, a small, shimmering puddle with water the color of a rainbow, and a moss rug in front of the door. As you glance back at the door you see a space of wall with some words scrawled quickly on it. You can't quite make out what it says so you turn to the task of opening this door",
-		"filename": ""
+		"filename": "door.jpg"
 	},
 	{
 		"id": 11,
 		"content": "The puddle shimmers like the inside of a kaleidoscope as you peer into it - but despite its beauty, when you fish through it you find nothing.",
-		"filename": ""
+		"filename": "puddle.jpg"
 	},
 	{
 		"id": 12,
 		"content": "As you lift the suspiciously ordinary-looking moss rug in front of the door, you see a large key tangled in the undergrowth of the plant. You manage to tug it out and unlock the door. Just as you start to make your way out, you notice the rug shuffling over to where the key is in the door before returning to where it once was - the key now gone. You are... unsure of how to feel and decide to make a hasty exit through the door before it closes behind you.",
-		"filename": ""
+		"filename": "moss.jpg"
 	},
 	{
 		"id": 13,
 		"content": "You squint your eyes to look beneath the head of the gigantic mushroom. You look up under the mushroom and see many, many spores and hanging vines. You give the mushroom a little shake to see if anything drops - however nothing happens, other than some light dust floating down.",
-		"filename": ""
+		"filename": "shroom.jpg"
 	},
 	{
 		"id": 14,
@@ -92,11 +92,11 @@
 	{
 		"id": 19,
 		"content": "“Our ideals align... take me with you and feel the power within.” You take the sword in hand and hear the voices of the others that came before you. Their voices seem to fade away, until only your thoughts remain.",
-		"filename": ""
+		"filename": "lightend.jpg"
 	},
 	{
 		"id": 20,
 		"content": "You touch the hilt of the sword and feel the voices’ volume rise to a wail. You stagger, your stamina draining, and soon your voice joins the others within the Sword. You scream and agonize at your fate. After some time passes, you hear the door open and someone steps into the room. You shout until your voice is heard above all others - you will get answers for why this is your fate.",
-		"filename": ""
+		"filename": "darkend.jpg"
 	}
 ]
